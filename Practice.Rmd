@@ -3,6 +3,7 @@ title: "Practice"
 author: "Opeoluwa Oyedeji"
 date: "`r Sys.Date()`"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
