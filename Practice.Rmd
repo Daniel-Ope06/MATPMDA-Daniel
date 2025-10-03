@@ -10,27 +10,27 @@ output:
 
 #Contants
 ```{r}
-#in built constants
+#In built constant
 pi
 ```
 
 
 #Vectors
 ```{r}
-# Used like lists in python
-# 'c' means concatenation
+#Used like lists in python
+#'c' means concatenation
 v <- c(1, 5, 4, 1, 1, 2)
 print(v)
 
-# To add a number across the vector
+#To add a number across the vector
 v1 <- v + 1000
 print(v1)
 
-# To square all the numbers in the vector
+#To square all the numbers in the vector
 v2 <- v^2
 print(v2)
 
-# To inverse all the numbers in the vector
+#To inverse all the numbers in the vector
 v3 <- 1/v
 print(v3)
 ```
@@ -38,7 +38,7 @@ print(v3)
 
 #Ranges
 ```{r}
-# R's version of range() in python
+#R version of range() in python
 1:9
 100:120
 ```
@@ -56,3 +56,104 @@ plot(x, x^2)
 
 
 #Data Analysis
+```{r}
+mtcars #Prints whole data set
+```
+
+```{r}
+head(mtcars) #Prints first 6 rows
+```
+
+```{r}
+tail(mtcars) #Prints last 6 rows
+```
+
+```{r}
+#Use '$' to get a column from a dataset
+mtcars$mpg
+```
+
+```{r}
+#You can also use '[]' to get columns
+mtcars[,"mpg"] #by column name
+mtcars[,1] #by column number
+```
+
+```{r}
+plot(mtcars$wt, mtcars$mpg, xlab = "Weight (lb/1000)", ylab="Miles per gallon", pch=16)
+```
+
+#Frequency Tables
+```{r}
+table(mtcars$am) #Shows how many manual & automatic cars there are
+```
+
+```{r}
+#Show the freq of cars with 3,4,5 gears
+gears <- table(mtcars$gear)
+gears
+```
+
+```{r}
+barplot(gears)
+```
+
+```{r}
+hist(mtcars$hp)
+```
+
+```{r}
+hist(
+  mtcars$hp, xlab="gross horsepower",
+  main = "Histogram of Horsepower for Vehicles\n
+  in the 1974 Motor Trend Magazine",
+  ylim = c(0, 12), xlim = c(0, 400)
+  )
+```
+
+```{r}
+boxplot(
+  hp~gear,
+  data=mtcars,
+  main="Horsepower for Vehicles \n
+  in the 1974 Motor Trend Magazine (n=32)"
+  )
+```
+
+
+#Further Work
+```{r}
+#There are 31 trees in the dataset
+trees
+```
+
+```{r}
+summary(trees)
+```
+
+```{r}
+maxGirth <- max(trees$Girth)
+minGirth <- min(trees$Girth)
+cat("Girth ranges from", minGirth, "to", maxGirth)
+```
+
+```{r}
+maxHeight <- max(trees$Height)
+minHeight <- min(trees$Height)
+cat("Height ranges from", minHeight, "to", maxHeight)
+```
+
+```{r}
+maxVolume <- max(trees$Volume)
+minVolume <- min(trees$Volume)
+cat("Volume ranges from", minVolume, "to", maxVolume)
+```
+
+```{r}
+plot(trees$Girth, trees$Height, xlab = "Girth", ylab="Height", pch=16)
+```
+
+```{r}
+plot(trees$Girth, trees$Volume, xlab = "Girth", ylab="Volume", pch=16)
+```
+
