@@ -2,29 +2,57 @@
 title: "Practice"
 author: "Opeoluwa Oyedeji"
 date: "`r Sys.Date()`"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+
+#Contants
+```{r}
+#in built constants
+pi
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+#Vectors
+```{r}
+# Used like lists in python
+# 'c' means concatenation
+v <- c(1, 5, 4, 1, 1, 2)
+print(v)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+# To add a number across the vector
+v1 <- v + 1000
+print(v1)
 
-```{r cars}
-summary(cars)
+# To square all the numbers in the vector
+v2 <- v^2
+print(v2)
+
+# To inverse all the numbers in the vector
+v3 <- 1/v
+print(v3)
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+#Ranges
+```{r}
+# R's version of range() in python
+1:9
+100:120
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+#Plots
+```{r}
+plot(v)
+```
+
+```{r}
+x <- 1:30
+plot(x, x^2)
+```
+
+
+#Data Analysis
