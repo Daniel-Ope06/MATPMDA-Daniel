@@ -8,15 +8,15 @@ output:
     df_print: paged
 ---
 
-
-#Contants
+# Practical 1 (03/10/2025)
+## Contants
 ```{r}
 #In built constant
 pi
 ```
 
 
-#Vectors
+## Vectors
 ```{r}
 #Used like lists in python
 #'c' means concatenation
@@ -37,7 +37,7 @@ print(v3)
 ```
 
 
-#Ranges
+## Ranges
 ```{r}
 #R version of range() in python
 1:9
@@ -45,7 +45,7 @@ print(v3)
 ```
 
 
-#Plots
+## Plots
 ```{r}
 plot(v)
 ```
@@ -56,7 +56,7 @@ plot(x, x^2)
 ```
 
 
-#Data Analysis
+## Data Analysis
 ```{r}
 mtcars #Prints whole data set
 ```
@@ -84,7 +84,7 @@ mtcars[,1] #by column number
 plot(mtcars$wt, mtcars$mpg, xlab = "Weight (lb/1000)", ylab="Miles per gallon", pch=16)
 ```
 
-#Frequency Tables
+## Frequency Tables
 ```{r}
 table(mtcars$am) #Shows how many manual & automatic cars there are
 ```
@@ -122,7 +122,7 @@ boxplot(
 ```
 
 
-#Further Work
+## Further Work
 ```{r}
 #There are 31 trees in the dataset
 trees
